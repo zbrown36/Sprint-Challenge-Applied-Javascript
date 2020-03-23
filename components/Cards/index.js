@@ -22,7 +22,7 @@ const request = axios.get('https://lambda-times-backend.herokuapp.com/articles')
 request
     .then(data => {
         const request = data.data.articles;
-
+        console.log(request)
         Object.keys(request).forEach((articleTopic) => {
 
             request[articleTopic].forEach(topic => {
@@ -31,7 +31,6 @@ request
                 const cards = document.querySelector('.cards-container');
 
                 cards.appendChild(newCards);
-
             })
         })
 

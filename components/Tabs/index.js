@@ -8,14 +8,16 @@
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
 
-const article = axios.get('https://lambda-times-backend.herokuapp.com/articles')
+const article = axios.get('https://lambda-times-backend.herokuapp.com/topics')
 
 .then(data => {
-
+    
     const select = data.data.topics;
 
+    console.log(select)
+    
     select.forEach(topic => {
-        
+
         const tabs = info(topic);
         const topics = document.querySelector('.topics');
 
